@@ -1,0 +1,3 @@
+[tools]
+"npm:oxfmt" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
