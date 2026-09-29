@@ -1,35 +1,68 @@
 {
-  "version": "20260929.1.1",
+  "version": "20260928.051414-e57992d",
   "description": "Selection-first modal text editor",
-  "homepage": "https://github.com/0hirume/mitos",
+  "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/0hirume/mitos/releases/download/nightly-20260929.1.1/mitos-nightly-20260929.1.1-x86_64-windows.zip",
-      "hash": "9ae874ff366fcd533e860c369865052972455c199cb856d8d52e7420e9397054",
-      "extract_dir": "mitos-nightly-20260929.1.1-x86_64-windows"
+      "url": [
+        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip",
+        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+      ],
+      "hash": [
+        "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
+        "ea40e576f389f931fe4b298a8d43f08aa2facd9790fc4ce1a40360a392d6dd0f",
+        "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
+      ],
+      "installer": {
+        "file": "install.ps1",
+        "args": ["$dir", "64bit"]
+      }
     },
     "arm64": {
-      "url": "https://github.com/0hirume/mitos/releases/download/nightly-20260929.1.1/mitos-nightly-20260929.1.1-aarch64-windows.zip",
-      "hash": "e578e889a1a94ef8108ae2ae013d123204caf322172e80ca920fdfe62dcfb22a",
-      "extract_dir": "mitos-nightly-20260929.1.1-aarch64-windows"
+      "url": [
+        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip",
+        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+      ],
+      "hash": [
+        "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
+        "ea40e576f389f931fe4b298a8d43f08aa2facd9790fc4ce1a40360a392d6dd0f",
+        "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
+      ],
+      "installer": {
+        "file": "install.ps1",
+        "args": ["$dir", "arm64"]
+      }
     }
   },
+  "extract_dir": "mitos-e57992d43a8815b92c007885d819bad9d0a76e56",
+  "extract_to": "source",
+  "notes": "Builds locally. Requires Git, Rust via rustup, and Visual Studio C++ Build Tools with the Windows SDK. Each update recompiles the editor and grammars. Incompatible upstream changes stop installation if its packaging patch no longer applies.",
   "bin": "ms.exe",
   "checkver": {
-    "url": "https://github.com/0hirume/mitos/releases.atom",
-    "regex": "<title>nightly-([\\d.]+)</title>"
+    "url": "https://github.com/mitos-editor/mitos/commits/main.atom",
+    "regex": "<id>tag:github.com,2008:Grit::Commit/(?<commit>(?<short>[a-f0-9]{7})[a-f0-9]{33})</id>[\\s\\S]*?<updated>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z",
+    "replace": "${year}${month}${day}.${hour}${minute}${second}-${short}"
   },
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/0hirume/mitos/releases/download/nightly-$version/mitos-nightly-$version-x86_64-windows.zip",
-        "extract_dir": "mitos-nightly-$version-x86_64-windows"
+        "url": [
+          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip",
+          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+        ]
       },
       "arm64": {
-        "url": "https://github.com/0hirume/mitos/releases/download/nightly-$version/mitos-nightly-$version-aarch64-windows.zip",
-        "extract_dir": "mitos-nightly-$version-aarch64-windows"
+        "url": [
+          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip",
+          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+        ]
       }
-    }
+    },
+    "extract_dir": "mitos-$matchCommit"
   }
 }
