@@ -1,0 +1,35 @@
+{
+  "version": "20260929.1.1",
+  "description": "Selection-first modal text editor",
+  "homepage": "https://github.com/0hirume/mitos",
+  "license": "MPL-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/0hirume/mitos/releases/download/nightly-20260929.1.1/mitos-nightly-20260929.1.1-x86_64-windows.zip",
+      "hash": "9ae874ff366fcd533e860c369865052972455c199cb856d8d52e7420e9397054",
+      "extract_dir": "mitos-nightly-20260929.1.1-x86_64-windows"
+    },
+    "arm64": {
+      "url": "https://github.com/0hirume/mitos/releases/download/nightly-20260929.1.1/mitos-nightly-20260929.1.1-aarch64-windows.zip",
+      "hash": "e578e889a1a94ef8108ae2ae013d123204caf322172e80ca920fdfe62dcfb22a",
+      "extract_dir": "mitos-nightly-20260929.1.1-aarch64-windows"
+    }
+  },
+  "bin": "ms.exe",
+  "checkver": {
+    "url": "https://github.com/0hirume/mitos/releases.atom",
+    "regex": "<title>nightly-([\\d.]+)</title>"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/0hirume/mitos/releases/download/nightly-$version/mitos-nightly-$version-x86_64-windows.zip",
+        "extract_dir": "mitos-nightly-$version-x86_64-windows"
+      },
+      "arm64": {
+        "url": "https://github.com/0hirume/mitos/releases/download/nightly-$version/mitos-nightly-$version-aarch64-windows.zip",
+        "extract_dir": "mitos-nightly-$version-aarch64-windows"
+      }
+    }
+  }
+}
