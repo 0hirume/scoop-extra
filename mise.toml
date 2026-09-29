@@ -1,3 +1,4 @@
 [tools]
+"github:powershell/powershelleditorservices" = "latest"
 "npm:oxfmt" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
