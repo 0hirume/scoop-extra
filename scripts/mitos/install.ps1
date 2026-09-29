@@ -9,6 +9,12 @@ param(
 $ErrorActionPreference = 'Stop'
 Get-Command cargo, git -ErrorAction Stop | Out-Null
 $source = Join-Path $Directory 'source'
+$archive = Join-Path $Directory 'archive'
+$extracted = Join-Path $Directory 'extracted'
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory($archive, $extracted)
+Move-Item (Get-ChildItem $extracted -Directory).FullName $source
+Remove-Item $extracted, $archive
 $patch = Join-Path $PSScriptRoot 'runtime.patch'
 git -C $source apply --ignore-space-change $patch
 

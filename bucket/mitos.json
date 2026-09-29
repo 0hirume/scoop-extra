@@ -6,13 +6,13 @@
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip",
+        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
         "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
         "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
       ],
       "hash": [
         "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
-        "ea40e576f389f931fe4b298a8d43f08aa2facd9790fc4ce1a40360a392d6dd0f",
+        "07f2026ebaeffa2bede7ca8425b0a2c14329ab1a2c1761683064859ef4953b5d",
         "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
       ],
       "installer": {
@@ -22,13 +22,13 @@
     },
     "arm64": {
       "url": [
-        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip",
+        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
         "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
         "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
       ],
       "hash": [
         "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
-        "ea40e576f389f931fe4b298a8d43f08aa2facd9790fc4ce1a40360a392d6dd0f",
+        "07f2026ebaeffa2bede7ca8425b0a2c14329ab1a2c1761683064859ef4953b5d",
         "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
       ],
       "installer": {
@@ -37,8 +37,6 @@
       }
     }
   },
-  "extract_dir": "mitos-e57992d43a8815b92c007885d819bad9d0a76e56",
-  "extract_to": "source",
   "notes": "Builds locally. Requires Git, Rust via rustup, and Visual Studio C++ Build Tools with the Windows SDK. Each update recompiles the editor and grammars. Incompatible upstream changes stop installation if its packaging patch no longer applies.",
   "bin": "ms.exe",
   "checkver": {
@@ -50,19 +48,18 @@
     "architecture": {
       "64bit": {
         "url": [
-          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip",
+          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
           "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
           "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
         ]
       },
       "arm64": {
         "url": [
-          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip",
+          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
           "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
           "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
         ]
       }
-    },
-    "extract_dir": "mitos-$matchCommit"
+    }
   }
 }
