@@ -3,34 +3,24 @@
   "description": "Selection-first modal text editor",
   "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
+  "url": [
+    "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
+    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+  ],
+  "hash": [
+    "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
+    "649f81fc9cbe583492a9194d6cc7f84c5af7a21ffc020b252e5a763df1e6a5a6",
+    "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
+  ],
   "architecture": {
     "64bit": {
-      "url": [
-        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
-        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
-      ],
-      "hash": [
-        "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
-        "a2913fe7e3a348acd6d65f57d7937aaf8d8856396e5378a0e81b39b343d6bdb8",
-        "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
-      ],
       "installer": {
         "file": "install.ps1",
         "args": ["$dir", "64bit"]
       }
     },
     "arm64": {
-      "url": [
-        "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
-        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-        "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
-      ],
-      "hash": [
-        "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
-        "a2913fe7e3a348acd6d65f57d7937aaf8d8856396e5378a0e81b39b343d6bdb8",
-        "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
-      ],
       "installer": {
         "file": "install.ps1",
         "args": ["$dir", "arm64"]
@@ -45,21 +35,10 @@
     "replace": "${year}${month}${day}.${hour}${minute}${second}-${short}"
   },
   "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": [
-          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
-          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
-        ]
-      },
-      "arm64": {
-        "url": [
-          "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
-          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-          "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
-        ]
-      }
-    }
+    "url": [
+      "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
+      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
+      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+    ]
   }
 }

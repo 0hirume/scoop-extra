@@ -7,7 +7,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-Get-Command cargo, git -ErrorAction Stop | Out-Null
+Get-Command cargo, git | Out-Null
 $source = Join-Path $Directory 'source'
 $archive = Join-Path $Directory 'archive'
 $extracted = Join-Path $Directory 'extracted'
@@ -33,7 +33,7 @@ Push-Location $source
 
 try {
     Remove-Item Env:MITOS_DISABLE_AUTO_GRAMMAR_BUILD -ErrorAction SilentlyContinue
-    cargo build --profile opt --locked --package term --bin ms --target $target --target-dir target
+    cargo build --profile opt --locked --target $target --target-dir target
 
     if ($LASTEXITCODE -ne 0) {
         throw 'Mitos source build failed.'
