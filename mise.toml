@@ -1,4 +1,5 @@
 [tools]
+"github:0hirume/breathers" = "latest"
 "github:powershell/powershelleditorservices" = "latest"
 "npm:oxfmt" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
