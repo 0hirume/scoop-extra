@@ -15,12 +15,6 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory($archive, $extracted)
 Move-Item (Get-ChildItem $extracted -Directory).FullName $source
 Remove-Item $extracted, $archive
-$patch = Join-Path $PSScriptRoot 'runtime.patch'
-git -C $source apply --ignore-space-change $patch
-
-if ($LASTEXITCODE -ne 0) {
-    throw 'Upstream runtime discovery changed; review the packaging patch.'
-}
 
 $target = if ($Architecture -eq 'arm64') {
     'aarch64-pc-windows-msvc'

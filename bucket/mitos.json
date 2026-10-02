@@ -1,17 +1,15 @@
 {
-  "version": "20260928.051414-e57992d",
+  "version": "20261001.191958-4afc2cf",
   "description": "Selection-first modal text editor",
   "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
   "url": [
-    "https://github.com/mitos-editor/mitos/archive/e57992d43a8815b92c007885d819bad9d0a76e56.zip#/archive",
-    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+    "https://github.com/mitos-editor/mitos/archive/4afc2cf14c1d466ef5a15d90d8875ebda25d446e.zip#/archive",
+    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1"
   ],
   "hash": [
-    "14416209584daac9a2d741f410410f6941eecf320c388a4f82ef1c653c2aa10b",
-    "649f81fc9cbe583492a9194d6cc7f84c5af7a21ffc020b252e5a763df1e6a5a6",
-    "4d565b1bb8f522cd1fadfda5cf07417a390d2c54a969be4e70e8d8f0bdc15065"
+    "6f069c80396e76684a349f10d9456352f0671d4f623fcfd40b38a2379b635b85",
+    "f9bc562a4fad6b5225e3a86332c5e30f2dc29a8683720b634273d49c828785f4"
   ],
   "architecture": {
     "64bit": {
@@ -27,7 +25,7 @@
       }
     }
   },
-  "notes": "Builds locally. Requires Git, Rust via rustup, and Visual Studio C++ Build Tools with the Windows SDK. Each update recompiles the editor and grammars. Incompatible upstream changes stop installation if its packaging patch no longer applies.",
+  "notes": "Builds locally. Requires Git, Rust via rustup, and Visual Studio C++ Build Tools with the Windows SDK. Each update recompiles the editor and grammars.",
   "bin": "ms.exe",
   "checkver": {
     "url": "https://github.com/mitos-editor/mitos/commits/main.atom",
@@ -37,8 +35,7 @@
   "autoupdate": {
     "url": [
       "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
-      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1",
-      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/runtime.patch"
+      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1"
     ]
   }
 }
