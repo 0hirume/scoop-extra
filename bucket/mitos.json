@@ -1,14 +1,14 @@
 {
-  "version": "20261001.191958-4afc2cf",
+  "version": "20261005.200022-e3b047d",
   "description": "Selection-first modal text editor",
   "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
   "url": [
-    "https://github.com/mitos-editor/mitos/archive/4afc2cf14c1d466ef5a15d90d8875ebda25d446e.zip#/archive",
+    "https://github.com/mitos-editor/mitos/archive/e3b047d4c65fcd39875ab33e283273b4e83f545c.zip#/archive",
     "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1"
   ],
   "hash": [
-    "6f069c80396e76684a349f10d9456352f0671d4f623fcfd40b38a2379b635b85",
+    "9fe02276c8751d616e0715af2d0dbf7757fd24e54360c58e7d7d031790110c18",
     "f9bc562a4fad6b5225e3a86332c5e30f2dc29a8683720b634273d49c828785f4"
   ],
   "architecture": {
