@@ -1,41 +1,32 @@
 {
-  "version": "20261005.200022-e3b047d",
+  "version": "0.1.0",
   "description": "Selection-first modal text editor",
   "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
-  "url": [
-    "https://github.com/mitos-editor/mitos/archive/e3b047d4c65fcd39875ab33e283273b4e83f545c.zip#/archive",
-    "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1"
-  ],
-  "hash": [
-    "9fe02276c8751d616e0715af2d0dbf7757fd24e54360c58e7d7d031790110c18",
-    "f9bc562a4fad6b5225e3a86332c5e30f2dc29a8683720b634273d49c828785f4"
-  ],
   "architecture": {
     "64bit": {
-      "installer": {
-        "file": "install.ps1",
-        "args": ["$dir", "64bit"]
-      }
+      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.0/mitos-v0.1.0-x86_64-windows.zip",
+      "hash": "c3257fb65d67237767831e83010c846244596ab0151daea3902ed43700234101",
+      "extract_dir": "mitos-v0.1.0-x86_64-windows"
     },
     "arm64": {
-      "installer": {
-        "file": "install.ps1",
-        "args": ["$dir", "arm64"]
-      }
+      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.0/mitos-v0.1.0-aarch64-windows.zip",
+      "hash": "f4b1c4dc73a66556151c210683d33f075a243101f10015e563de698ec19dab5a",
+      "extract_dir": "mitos-v0.1.0-aarch64-windows"
     }
   },
-  "notes": "Builds locally. Requires Git, Rust via rustup, and Visual Studio C++ Build Tools with the Windows SDK. Each update recompiles the editor and grammars.",
   "bin": "ms.exe",
-  "checkver": {
-    "url": "https://github.com/mitos-editor/mitos/commits/main.atom",
-    "regex": "<id>tag:github.com,2008:Grit::Commit/(?<commit>(?<short>[a-f0-9]{7})[a-f0-9]{33})</id>[\\s\\S]*?<updated>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z",
-    "replace": "${year}${month}${day}.${hour}${minute}${second}-${short}"
-  },
+  "checkver": "github",
   "autoupdate": {
-    "url": [
-      "https://github.com/mitos-editor/mitos/archive/$matchCommit.zip#/archive",
-      "https://raw.githubusercontent.com/0hirume/scoop-extra/main/scripts/mitos/install.ps1"
-    ]
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mitos-editor/mitos/releases/download/v$version/mitos-v$version-x86_64-windows.zip",
+        "extract_dir": "mitos-v$version-x86_64-windows"
+      },
+      "arm64": {
+        "url": "https://github.com/mitos-editor/mitos/releases/download/v$version/mitos-v$version-aarch64-windows.zip",
+        "extract_dir": "mitos-v$version-aarch64-windows"
+      }
+    }
   }
 }
