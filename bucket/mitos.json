@@ -1,18 +1,18 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Selection-first modal text editor",
   "homepage": "https://github.com/mitos-editor/mitos",
   "license": "MPL-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.2/mitos-v0.1.2-x86_64-windows.zip",
-      "hash": "dab8cfcb4fabec6d115207f1e49cdf7f799a9182992191ceeae993c9221d3364",
-      "extract_dir": "mitos-v0.1.2-x86_64-windows"
+      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.3/mitos-v0.1.3-x86_64-windows.zip",
+      "hash": "c7f70f73c62707f922bda1e7c840f0317fdc50cc9f187712c06af7bb7e886f2e",
+      "extract_dir": "mitos-v0.1.3-x86_64-windows"
     },
     "arm64": {
-      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.2/mitos-v0.1.2-aarch64-windows.zip",
-      "hash": "a18b7d1255362aa2e0a671fd3cf4b6e10aadd9de33debb91de93ae45142d3e7e",
-      "extract_dir": "mitos-v0.1.2-aarch64-windows"
+      "url": "https://github.com/mitos-editor/mitos/releases/download/v0.1.3/mitos-v0.1.3-aarch64-windows.zip",
+      "hash": "4580e7aabd9b3b2d162eeaebe0e88b5458371a78f0f8f1eea19418268976f8e2",
+      "extract_dir": "mitos-v0.1.3-aarch64-windows"
     }
   },
   "bin": "ms.exe",
